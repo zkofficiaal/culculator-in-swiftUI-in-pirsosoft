@@ -30,11 +30,13 @@ struct TopBarView: View {
             Button {
 
             } label: {
-
-                Image(systemName: "plus.forwardslash.minus")
-                    .font(.title2)
+                
+                Image("culculator emoji")
+                //.font(.title2)
                     .foregroundColor(.white)
-                    .frame(width: 50, height: 50)
+                    .frame(
+                        width: Constants.topButtonSize,
+                        height: Constants.topButtonSize)
                     .background(Color.gray.opacity(0.25))
                     .clipShape(Circle())
             }

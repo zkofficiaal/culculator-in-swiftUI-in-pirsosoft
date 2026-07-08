@@ -5,29 +5,6 @@
 //  Created by Z.K   on 07/07/2026.
 //
 
-
-//├── App
-//│      CalculatorApp.swift
-//│
-//├── Views
-//│      ContentView.swift
-//│      TopBarView.swift
-//│      DisplayView.swift
-//│      ButtonGridView.swift
-//│      CalculatorButton.swift
-//│
-//├── ViewModels
-//│      CalculatorViewModel.swift
-//│
-//├── Models
-//│      CalculatorButtonType.swift
-//│
-//├── Utilities
-//│      AppColors.swift
-//│      Constants.swift
-//│
-//└── Assets
-
 import SwiftUI
 
 struct ContentView: View {
@@ -58,9 +35,7 @@ struct ContentView: View {
             .padding(.horizontal, Constants.horizontalPadding)
             .padding(.vertical, Constants.verticalPadding)
         }
-
     }
-
 }
 
 #Preview {
