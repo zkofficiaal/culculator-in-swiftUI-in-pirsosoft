@@ -8,30 +8,38 @@
 import SwiftUI
 
 struct TopBarView: View {
-    var body: some View {
-        HStack{
-            CircleButton(icon: "clock", background: .gray)
-            
-            Spacer()
-            
-            CircleButton(icon: "keyboard.fill", background: .gray)
-        }
-    }
-}
 
-struct CircleButton : View {
-    let icon : String
-    let background : Color
-    
-    var body: some View{
-        Button(action: {}){
-            Image(systemName: icon)
-                .font(.system(size: 22, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(width: 44, height: 44)
-                .background(Circle().fill(background))
+    var body: some View {
+
+        HStack {
+            Button {
+            } label: {
+                Image(systemName: "clock.arrow.circlepath")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .frame(
+                        width: Constants.topButtonSize,
+                        height: Constants.topButtonSize
+                    )
+                    .background(Color.gray.opacity(0.25))
+                    .clipShape(Circle())
+            }
+
+            Spacer()
+
+            Button {
+
+            } label: {
+
+                Image(systemName: "plus.forwardslash.minus")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .frame(width: 50, height: 50)
+                    .background(Color.gray.opacity(0.25))
+                    .clipShape(Circle())
+            }
         }
-        .buttonStyle(.plain)
+        .padding(.horizontal)
     }
 }
 

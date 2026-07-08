@@ -31,31 +31,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    //@StateObject private var viewModel = CalculatorViewModel()
+
+    // MARK: - ViewModel
+
+    @StateObject private var viewModel = CalculatorViewModel()
 
     var body: some View {
         ZStack {
+            
             Color.black
                 .ignoresSafeArea()
-            
-            VStack(spacing : 20) {
+
+            VStack(spacing: 20) {
+                
                 TopBarView()
-                    .foregroundStyle(.white)
-                Spacer()
-                
-                DisplayView()
-                    .foregroundStyle(.white)
                 
                 Spacer()
-                
-                ButtonGridView()
-                    .foregroundStyle(Color.white)
+
+                DisplayView(viewModel: viewModel)
+
+                Spacer()
+
+                ButtonGridView(viewModel: viewModel)
+
             }
-            .padding(.horizontal, 20) //?
-            .padding(.vertical) //?
-            
+            .padding(.horizontal, Constants.horizontalPadding)
+            .padding(.vertical, Constants.verticalPadding)
         }
+
     }
+
 }
 
 #Preview {
