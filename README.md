@@ -6,12 +6,6 @@
 A simple and clean calculator app built using **SwiftUI** and **MVVM architecture**.  
 This project was created as part of my iOS development learning journey.
 
-## Preview
-
-<p align="center">
-  <img src="Screenshots/calculator.png" width="300">
-</p>
-
 ## Features
 
 - Basic arithmetic operations
